@@ -15,8 +15,10 @@ export default function SingleCocktail() {
   const cocktail = useSelector((state) => state.singleCocktail.cocktail)
 
   useEffect(() => {
-    dispatch(fetchSingleCocktail(id))
-  }, [])
+    if (id) {
+      dispatch(fetchSingleCocktail(id))
+    }
+  }, [id])
 
   if (status === 'loading') {
     return <Loading />

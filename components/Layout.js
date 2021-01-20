@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Head from 'next/head'
-import Navbar from './Navbar'
+import Navbar from './Navbar.tsx'
 import { fetchCocktails } from '../features/cocktails/cocktailsSlice'
 import { useDispatch, useSelector } from 'react-redux'
 

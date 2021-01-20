@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { SyntheticEvent, useEffect, useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import { setSearchTerm } from './cocktailsSlice'
 
