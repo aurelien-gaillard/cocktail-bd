@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import { setSearchTerm } from './cocktailsSlice'
 
-export default function SearchForm() {
+const SearchForm =() => {
   const dispatch = useDispatch()
-  const searchValue = useRef('')
+  const searchValue = useRef<HTMLInputElement>(null!)
 
   useEffect(() => {
     searchValue.current.focus()
@@ -13,7 +13,7 @@ export default function SearchForm() {
   function searchCocktail() {
     dispatch(setSearchTerm(searchValue.current.value))
   }
-  function handleSubmit(e) {
+  const handleSubmit =(e: React.SyntheticEvent)=> {
     e.preventDefault()
   }
   return (
@@ -33,3 +33,5 @@ export default function SearchForm() {
     </section>
   )
 }
+
+export default SearchForm

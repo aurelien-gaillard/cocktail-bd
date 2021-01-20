@@ -1,6 +1,15 @@
 import React from 'react'
 import Link from 'next/link'
-export default function Cocktail({ image, name, id, info, glass }) {
+
+type CocktailProps = {
+  image: string,
+  name: string,
+  id: number,
+  info: number,
+  glass: number
+}
+
+const Cocktail = ({ image, name, id, info, glass }: CocktailProps) => {
   return (
     <article className='cocktail'>
       <div className='img-container'>
@@ -17,3 +26,5 @@ export default function Cocktail({ image, name, id, info, glass }) {
     </article>
   )
 }
+
+export default Cocktail
